@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="bol"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btopla"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="237dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="141dp"
+        android:onClick="topla"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/bcikar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bbol"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="36dp"
+        android:onClick="bol"
+        android:text="/"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bcarp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bcarp" />
+
+    <Button
+        android:id="@+id/bcikar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="47dp"
+        android:onClick="cikar"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btopla"
+        app:layout_constraintEnd_toStartOf="@+id/bcarp"
+        app:layout_constraintStart_toEndOf="@+id/btopla" />
+
+    <EditText
+        android:id="@+id/numberOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="enter a number"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/numberTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numberTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:ems="10"
+        android:hint="enter a number"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/bcarp"
+        app:layout_constraintStart_toStartOf="@+id/numberOne"
+        app:layout_constraintTop_toBottomOf="@+id/numberOne" />
+
+    <Button
+        android:id="@+id/bcarp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="141dp"
+        android:onClick="carp"
+        android:text="*"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/bbol"
+        app:layout_constraintStart_toEndOf="@+id/bcikar"
+        app:layout_constraintTop_toBottomOf="@+id/numberTwo" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="190dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginBottom="238dp"
+        android:text="Result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bcarp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
